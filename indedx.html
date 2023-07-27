@@ -1,0 +1,126 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Card Slider</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TODO LIST</h1>
+  <div class="carousel">
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="./picture/collection_postman.png" alt="collection_postman" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">Collection Postman</h4>
+          <p class="card-text">Ensemble des requetes liées à l'api</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="./picture/postman_createTask.png" alt="création d'une tâche" style="height: 400px;">
+        <div class="card-body">
+          <h4 class="card-title">création d'une tâche</h4>
+          <p class="card-text">envoi de la requête de création d'une tache sur le endpoint de l'api</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="./picture/postman_CreateUser.png" alt="création d'un user" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">création d'un user</h4>
+          <p class="card-text">envoi de la requête de création d'une tache sur le endpoint de l'api</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="./picture/postman_deleteUserById.png" alt="delete d'un user par son id" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">delete d'un user par son id</h4>
+          <p class="card-text">envoi de la requête de création d'une tache sur le endpoint de l'api</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="./picture/postman_deteleTaskById.png" alt="delete d'une tache par son id" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">delete d'une tache par son id</h4>
+          <p class="card-text">envoi de la requête de création d'une tache sur le endpoint de l'api</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="./picture/postman_GetallStatus.png" alt="affiche tous les status" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">affiche tous les status</h4>
+          <p class="card-text">envoi de la requête de création d'une tache sur le endpoint de l'api</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="./picture/postman_GetAllTasks.png" alt="affiche toutes les tâches" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">affiche toutes les tâches</h4>
+          <p class="card-text">envoi de la requête de création d'une tache sur le endpoint de l'api</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="./picture/postman_GetAllUsers.png" alt="affiche tous les users" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">affiche tous les users</h4>
+          <p class="card-text">envoi de la requête de création d'une tache sur le endpoint de l'api</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="./picture/postman_getStatusById.png" alt="affiche un status par son id" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">affiche un status par son id</h4>
+          <p class="card-text">envoi de la requête de création d'une tache sur le endpoint de l'api</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+          <img class="card-img-top" src="./picture/postman_GetTaksByUserId.png" alt="affiche les tâches d'un user en fonction de son id" style="height: 200px;">
+          <div class="card-body">
+            <h4 class="card-title">affiche les tâches d'un user en fonction de son id</h4>
+            <p class="card-text">envoi de la requête de création d'une tache sur le endpoint de l'api</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img class="card-img-top" src="./picture/postman_getTaskById.png" alt="affiche une tâche par son id" style="height: 200px;">
+          <div class="card-body">
+            <h4 class="card-title">affiche une tâche par son id</h4>
+            <p class="card-text">envoi de la requête de création d'une tache sur le endpoint de l'api</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img class="card-img-top" src="./picture/postman_GetTasksByStatus.png" alt="affiche les tâches selon un status donné" style="height: 200px;">
+          <div class="card-body">
+            <h4 class="card-title">affiche les tâches selon un status donné</h4>
+            <p class="card-text">envoi de la requête de création d'une tache sur le endpoint de l'api</p>
+          </div>
+        </div>
+      </div>
+    <button class="nav left" onclick="prevSlide()"><i class="bi bi-chevron-left"></i></button>
+    <button class="nav right" onclick="nextSlide()"><i class="bi bi-chevron-right"></i></button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ToDoList</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>ToDoList</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>IdTask</th>
+                <th>IdUser</th>
+                <th>IdStatus</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>DateCreated</th>
+                <th>DateDue</th>
+            </tr>
+        </thead>
+        <tbody id="stockList"></tbody>
+    </table>
+
+    <script>
+        // Make an AJAX request to fetch the data
+        fetch('https://localhost:7063/api/Task') // Replace with the actual API endpoint URL
+            .then(response => response.json())
+            .then(stockData => {
+                // Render the data on the page
+                var stockListElement = document.getElementById('stockList');
+                stockData.forEach(stock => {
+                    var tableRow = document.createElement('tr');
+
+                    // Populate the table cells with the data
+                    var idCell = document.createElement('td');
+                    idCell.textContent = stock.IdTask;
+                    tableRow.appendChild(idCell);
+
+                    var predecesseurCell = document.createElement('td');
+                    predecesseurCell.textContent = stock.IdUser;
+                    tableRow.appendChild(predecesseurCell);
+
+                    var successeurCell = document.createElement('td');
+                    successeurCell.textContent = stock.IdStatus;
+                    tableRow.appendChild(successeurCell);
+
+                    var dateLienCell = document.createElement('td');
+                    dateLienCell.textContent = stock.Name;
+                    tableRow.appendChild(dateLienCell);
+
+                    var transfertSiegeCell = document.createElement('td');
+                    transfertSiegeCell.textContent = stock.Description;
+                    tableRow.appendChild(transfertSiegeCell);
+
+                    var continuiteEcoCell = document.createElement('td');
+                    continuiteEcoCell.textContent = stock.DateCreated;
+                    tableRow.appendChild(continuiteEcoCell);
+
+                    var dateTraitementCell = document.createElement('td');
+                    dateTraitementCell.textContent = stock.DateDue;
+                    tableRow.appendChild(dateTraitementCell);
+
+                    stockListElement.appendChild(tableRow);
+                });
+            })
+           // .catch(error => console.error(error));
+    </script>
+</body>
+</html>
+

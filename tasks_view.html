@@ -61,40 +61,40 @@
                 var stockListElement = document.getElementById('stockList');
                 stockData.forEach(stock => {
                     var tableRow = document.createElement('tr');
-
+    
                     // Populate the table cells with the data
                     var idCell = document.createElement('td');
-                    idCell.textContent = stock.IdTask;
+                    idCell.textContent = stock.idTask; // Corrected property name
                     tableRow.appendChild(idCell);
-
+    
                     var predecesseurCell = document.createElement('td');
-                    predecesseurCell.textContent = stock.IdUser;
+                    predecesseurCell.textContent = stock.idUser; // Corrected property name
                     tableRow.appendChild(predecesseurCell);
-
+    
                     var successeurCell = document.createElement('td');
-                    successeurCell.textContent = stock.IdStatus;
+                    successeurCell.textContent = stock.idStatus; // Corrected property name
                     tableRow.appendChild(successeurCell);
-
-                    var dateLienCell = document.createElement('td');
-                    dateLienCell.textContent = stock.Name;
-                    tableRow.appendChild(dateLienCell);
-
-                    var transfertSiegeCell = document.createElement('td');
-                    transfertSiegeCell.textContent = stock.Description;
-                    tableRow.appendChild(transfertSiegeCell);
-
-                    var continuiteEcoCell = document.createElement('td');
-                    continuiteEcoCell.textContent = stock.DateCreated;
-                    tableRow.appendChild(continuiteEcoCell);
-
-                    var dateTraitementCell = document.createElement('td');
-                    dateTraitementCell.textContent = stock.DateDue;
-                    tableRow.appendChild(dateTraitementCell);
-
+    
+                    var nameCell = document.createElement('td');
+                    nameCell.textContent = stock.name; // Corrected property name
+                    tableRow.appendChild(nameCell);
+    
+                    var descriptionCell = document.createElement('td');
+                    descriptionCell.textContent = stock.description; // Corrected property name
+                    tableRow.appendChild(descriptionCell);
+    
+                    var dateCreatedCell = document.createElement('td');
+                    dateCreatedCell.textContent = stock.dateCreated; // Corrected property name
+                    tableRow.appendChild(dateCreatedCell);
+    
+                    var dateDueCell = document.createElement('td');
+                    dateDueCell.textContent = stock.dateDue; // Corrected property name
+                    tableRow.appendChild(dateDueCell);
+    
                     stockListElement.appendChild(tableRow);
                 });
             })
-           // .catch(error => console.error(error));
+            .catch(error => console.error(error));
     </script>
 </body>
 </html>

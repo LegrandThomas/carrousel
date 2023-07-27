@@ -42,7 +42,7 @@ body {
     filter: blur(calc(var(--abs-offset) * 1rem));
     transition: all 0.3s ease-out;
     opacity: var(--opacity);
-    pointer-events: none; /* Empêcher les interactions avec les cartes masquées */
+    pointer-events: auto; /* Add this line to allow click events on links */
   }
   
   .card {
@@ -93,4 +93,6 @@ body {
     right: -5rem;
   }
 
- 
+ a{
+    z-index:5000;
+ }

@@ -72,7 +72,25 @@
                     tableRow.appendChild(predecesseurCell);
     
                     var successeurCell = document.createElement('td');
-                    successeurCell.textContent = stock.idStatus; // Corrected property name
+
+                    // console.log(stock.idStatus);
+                    // console.log(parseInt(stock.idStatus));
+                    // console.log(typeof(stock.idStatus));
+                
+
+                    switch (parseInt(stock.idStatus)) {
+                        case 1:
+                        successeurCell.textContent = "à faire"; // Corrected property name
+                            break;
+                            case 2:
+                            successeurCell.textContent = "En cours"; // Corrected property name
+                            break;
+                            case 3:
+                            successeurCell.textContent = "Terminée"; // Corrected property name
+                            break;
+                        default:
+                            break;
+                    }
                     tableRow.appendChild(successeurCell);
     
                     var nameCell = document.createElement('td');
